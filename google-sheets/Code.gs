@@ -167,7 +167,7 @@ function bouton(url, texte) {
 function ongletInscriptions() {
   const classeur = SpreadsheetApp.getActiveSpreadsheet();
   const onglet = classeur.getSheetByName(ONGLET) || classeur.getSheets()[0];
-  if (PropertiesService.getDocumentProperties().getProperty('mise_en_forme') !== '1') {
+  if (PropertiesService.getDocumentProperties().getProperty('mise_en_forme_v2') !== '1') {
     mettreEnForme(classeur, onglet);
   }
   return onglet;
@@ -201,7 +201,7 @@ function mettreEnForme(classeur, onglet) {
   const largeurs = { date_inscription: 140, email: 230, telephone: 140, societe: 170, delai_lancement: 190, question: 280, statut: 140, notes: 240 };
   Object.keys(largeurs).forEach(function (cle) { onglet.setColumnWidth(col[cle] + 1, largeurs[cle]); });
 
-  PropertiesService.getDocumentProperties().setProperty('mise_en_forme', '1');
+  PropertiesService.getDocumentProperties().setProperty('mise_en_forme_v2', '1');
 }
 
 function indexColonnes() {
