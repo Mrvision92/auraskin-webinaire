@@ -1,8 +1,8 @@
 /* ==========================================================
    CONFIGURATION
-   endpoint : URL qui reçoit les inscriptions (webhook Make / Zapier,
-   Google Apps Script, Brevo, CRM…). Laisser vide = mode démo :
-   le formulaire affiche la confirmation sans rien envoyer.
+   endpoint : URL de l'application Web Google Apps Script (…/exec) qui
+   écrit chaque inscription dans le Google Sheets (voir google-sheets/README.md).
+   Laisser vide = mode démo : le formulaire affiche la confirmation sans rien envoyer.
    ========================================================== */
 const CONFIG = {
   endpoint: '',
@@ -238,13 +238,15 @@ const CONFIG = {
       console.info('[Mode démo] Inscription non envoyée (CONFIG.endpoint vide) :', data);
       return new Promise(function (resolve) { setTimeout(resolve, 700); });
     }
-    // Format formulaire classique : accepté par Make, Zapier, Google Apps Script, etc.
+    // Format formulaire classique (sans pré-requête CORS) : lu par e.parameter dans Apps Script.
     return fetch(CONFIG.endpoint, {
       method: 'POST',
       body: new URLSearchParams(data),
     }).then(function (res) {
       if (!res.ok) throw new Error('HTTP ' + res.status);
-      return res;
+      return res.json().catch(function () { return { ok: true }; });
+    }).then(function (reponse) {
+      if (reponse && reponse.ok === false) throw new Error(reponse.erreur || 'refusé');
     });
   }
 
