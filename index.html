@@ -3,171 +3,187 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Webinaire AuraSkin | Tout comprendre du laser avant d'investir</title>
-  <meta name="description" content="Webinaire gratuit en direct le dimanche 1er novembre 2026 à 20h : le laser expliqué, nos machines, comment choisir, le chiffre d'affaires à prévoir et comment être rentable.">
-  <meta name="theme-color" content="#ffffff">
+  <title>Webinaire AuraSkin | Bien choisir sa machine laser avant d'investir</title>
+  <meta name="description" content="Webinaire gratuit en direct le dimanche 1er novembre 2026 à 20h : comprendre les caractéristiques des machines laser et faire le bon choix avant d'investir. Places limitées.">
+  <meta name="theme-color" content="#14110d">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Webinaire AuraSkin, dimanche 1er novembre à 20h">
-  <meta property="og:description" content="Le laser expliqué, nos machines, quel chiffre d'affaires viser et comment être rentable. Gratuit, en direct.">
+  <meta property="og:title" content="Faites le bon choix avant d'investir dans une machine laser">
+  <meta property="og:description" content="Webinaire gratuit en direct, dimanche 1er novembre à 20h. Places limitées.">
   <!-- Remplacer par l'URL absolue une fois la page en ligne -->
   <meta property="og:image" content="assets/og-image.jpg">
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="wrap site-header__inner">
-      <a href="https://www.auraskin.be" class="brand" aria-label="AuraSkin, retour au site">
-        <img src="assets/logo.png" alt="AuraSkin" width="140" height="21">
-      </a>
-      <a href="#inscription" class="btn btn--ghost btn--sm js-scroll-to-form">Réserver ma place</a>
+  <!-- Bandeau places limitées -->
+  <div class="announce">
+    <div class="wrap announce__inner">
+      <span class="live-dot live-dot--ink" aria-hidden="true"></span>
+      <p><strong>Places limitées</strong><span class="announce__extra"> pour le direct du dimanche 1<sup>er</sup> novembre à 20h</span></p>
+      <a href="#inscription" class="js-scroll-to-form">Réserver ma place</a>
     </div>
-  </header>
+  </div>
 
-  <main>
+  <div class="stage">
+    <header class="site-header">
+      <div class="wrap site-header__inner">
+        <a href="https://www.auraskin.be" class="brand" aria-label="AuraSkin, retour au site">
+          <img src="assets/logo.png" alt="AuraSkin" width="140" height="21">
+        </a>
+        <a href="#inscription" class="btn btn--outline-light btn--sm js-scroll-to-form">Réserver ma place</a>
+      </div>
+    </header>
+
     <!-- HERO + FORMULAIRE -->
     <section class="hero">
       <div class="wrap hero__grid">
         <div class="hero__intro">
           <div class="tags">
-            <p class="tag"><span class="tag__dot" aria-hidden="true"></span>Webinaire gratuit, en direct</p>
+            <p class="tag"><span class="live-dot" aria-hidden="true"></span>Webinaire gratuit, en direct</p>
             <p class="tag tag--gold">Places limitées</p>
           </div>
-          <h1 class="hero__title">Tout comprendre du laser avant d'investir.</h1>
-          <p class="hero__lead">Une soirée pour découvrir nos machines, savoir laquelle choisir, quel chiffre d'affaires viser et comment rentabiliser votre activité laser.</p>
-          <p class="hero__proof">Animé par l'équipe AuraSkin, 10 ans d'expérience au service des esthéticiennes.</p>
+          <h1 class="hero__title">Faites le bon choix avant d'investir dans une machine laser.</h1>
+          <p class="hero__lead">Une soirée pour comprendre les caractéristiques des machines laser et savoir ce qui fait vraiment la différence.</p>
         </div>
 
-        <div class="hero__date">
-          <div class="beam" aria-hidden="true"></div>
-          <p class="date">
-            <span class="date__day">Dimanche 1<sup>er</sup> novembre 2026</span>
-            <span class="date__time">20h00, heure de Bruxelles. En ligne, depuis chez vous.</span>
-          </p>
-          <div class="timer" data-timer role="timer" aria-label="Temps restant avant le début du webinaire"></div>
-          <p class="timer-status" data-timer-status hidden></p>
+        <div class="hero__event">
+          <div class="event">
+            <div class="beam" aria-hidden="true"></div>
+            <p class="event__label">Le direct commence dans</p>
+            <div class="timer" data-timer role="timer" aria-label="Temps restant avant le début du webinaire"></div>
+            <p class="timer-status" data-timer-status hidden></p>
+            <p class="event__date">
+              <strong>Dimanche 1<sup>er</sup> novembre 2026, 20h00</strong>
+              <span>Heure de Bruxelles. En ligne, depuis chez vous.</span>
+            </p>
+          </div>
+          <p class="hero__proof">Animé par l'équipe AuraSkin, 10 ans d'expérience au service des esthéticiennes.</p>
         </div>
 
         <div class="hero__form" id="inscription">
           <div class="card">
-            <div class="form-view" id="form-view">
-              <p class="seats"><span class="seats__dot" aria-hidden="true"></span>Places limitées pour le direct</p>
-              <h2 class="card__title">Réservez votre place</h2>
-              <p class="card__sub">Gratuit et sans engagement. Le lien de connexion vous est envoyé par email.</p>
+            <p class="card__band"><span class="live-dot live-dot--gold" aria-hidden="true"></span>Places limitées pour le direct</p>
+            <div class="card__body">
+              <div class="form-view" id="form-view">
+                <h2 class="card__title">Réservez votre place</h2>
+                <p class="card__sub">Gratuit et sans engagement. Le lien de connexion vous est envoyé par email.</p>
 
-              <form id="signup" novalidate>
-                <div class="row">
-                  <div class="field">
-                    <label for="prenom">Prénom</label>
-                    <input id="prenom" name="prenom" type="text" autocomplete="given-name" required>
-                    <p class="field__error" id="prenom-error"></p>
-                  </div>
-                  <div class="field">
-                    <label for="nom">Nom</label>
-                    <input id="nom" name="nom" type="text" autocomplete="family-name" required>
-                    <p class="field__error" id="nom-error"></p>
-                  </div>
-                </div>
-
-                <div class="field">
-                  <label for="email">Email</label>
-                  <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required>
-                  <p class="field__error" id="email-error"></p>
-                </div>
-
-                <div class="field">
-                  <label for="telephone">Téléphone</label>
-                  <input id="telephone" name="telephone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+32 470 12 34 56" required>
-                  <p class="field__error" id="telephone-error"></p>
-                </div>
-
-                <div class="field-group">
-                  <div class="field">
-                    <label for="societe">Nom de la société <span class="optional">(optionnel)</span></label>
-                    <input id="societe" name="societe" type="text" autocomplete="organization">
+                <form id="signup" novalidate>
+                  <div class="row">
+                    <div class="field">
+                      <label for="prenom">Prénom</label>
+                      <input id="prenom" name="prenom" type="text" autocomplete="given-name" required>
+                      <p class="field__error" id="prenom-error"></p>
+                    </div>
+                    <div class="field">
+                      <label for="nom">Nom</label>
+                      <input id="nom" name="nom" type="text" autocomplete="family-name" required>
+                      <p class="field__error" id="nom-error"></p>
+                    </div>
                   </div>
 
-                  <div class="reveal" id="tva-reveal" aria-hidden="true">
-                    <div class="reveal__inner">
-                      <div class="field">
-                        <label for="tva">Numéro de TVA <span class="optional">(optionnel)</span></label>
-                        <input id="tva" name="tva" type="text" placeholder="BE0123456789" autocapitalize="characters" spellcheck="false" tabindex="-1">
+                  <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required>
+                    <p class="field__error" id="email-error"></p>
+                  </div>
+
+                  <div class="field">
+                    <label for="telephone">Téléphone</label>
+                    <input id="telephone" name="telephone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+32 470 12 34 56" required>
+                    <p class="field__error" id="telephone-error"></p>
+                  </div>
+
+                  <div class="field-group">
+                    <div class="field">
+                      <label for="societe">Nom de la société <span class="optional">(optionnel)</span></label>
+                      <input id="societe" name="societe" type="text" autocomplete="organization">
+                    </div>
+
+                    <div class="reveal" id="tva-reveal" aria-hidden="true">
+                      <div class="reveal__inner">
+                        <div class="field">
+                          <label for="tva">Numéro de TVA <span class="optional">(optionnel)</span></label>
+                          <input id="tva" name="tva" type="text" placeholder="BE0123456789" autocapitalize="characters" spellcheck="false" tabindex="-1">
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <fieldset class="field choices" aria-describedby="delai-error">
-                  <legend>Quand pensez-vous lancer votre activité laser&nbsp;?</legend>
-                  <div class="choices__grid">
-                    <label class="choice"><input type="radio" name="delai" value="Moins d'un mois" required><span>Dans moins d'un mois</span></label>
-                    <label class="choice"><input type="radio" name="delai" value="1 à 3 mois"><span>D'ici 1 à 3 mois</span></label>
-                    <label class="choice"><input type="radio" name="delai" value="Plus de 3 mois"><span>Dans plus de 3 mois</span></label>
-                    <label class="choice"><input type="radio" name="delai" value="Je me renseigne uniquement"><span>Je me renseigne uniquement</span></label>
+                  <fieldset class="field choices" aria-describedby="delai-error">
+                    <legend>Quand pensez-vous lancer votre activité laser&nbsp;?</legend>
+                    <div class="choices__grid">
+                      <label class="choice"><input type="radio" name="delai" value="Moins d'un mois" required><span>Dans moins d'un mois</span></label>
+                      <label class="choice"><input type="radio" name="delai" value="1 à 3 mois"><span>D'ici 1 à 3 mois</span></label>
+                      <label class="choice"><input type="radio" name="delai" value="Plus de 3 mois"><span>Dans plus de 3 mois</span></label>
+                      <label class="choice"><input type="radio" name="delai" value="Je me renseigne uniquement"><span>Je me renseigne uniquement</span></label>
+                    </div>
+                    <p class="field__error" id="delai-error"></p>
+                  </fieldset>
+
+                  <details class="question">
+                    <summary><span>Poser une question à l'avance <span class="optional">(optionnel)</span></span></summary>
+                    <div class="field">
+                      <label for="question" class="sr-only">Votre question pour le webinaire</label>
+                      <textarea id="question" name="question" rows="3" placeholder="Nous y répondrons pendant le direct."></textarea>
+                    </div>
+                  </details>
+
+                  <div class="field consent">
+                    <label class="check">
+                      <input type="checkbox" name="consentement" id="consentement" required>
+                      <span>J'accepte qu'AuraSkin utilise ces informations pour m'envoyer l'accès au webinaire et me recontacter au sujet de mon projet. <a href="https://www.auraskin.be/confidentialite" target="_blank" rel="noopener">Politique de confidentialité</a></span>
+                    </label>
+                    <p class="field__error" id="consentement-error"></p>
                   </div>
-                  <p class="field__error" id="delai-error"></p>
-                </fieldset>
 
-                <details class="question">
-                  <summary><span>Poser une question à l'avance <span class="optional">(optionnel)</span></span></summary>
-                  <div class="field">
-                    <label for="question" class="sr-only">Votre question pour le webinaire</label>
-                    <textarea id="question" name="question" rows="3" placeholder="Nous y répondrons pendant le direct."></textarea>
+                  <!-- Anti-spam : champ invisible, laissé vide par les humains -->
+                  <div class="hp" aria-hidden="true">
+                    <label for="website">Ne pas remplir</label>
+                    <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
                   </div>
-                </details>
 
-                <div class="field consent">
-                  <label class="check">
-                    <input type="checkbox" name="consentement" id="consentement" required>
-                    <span>J'accepte qu'AuraSkin utilise ces informations pour m'envoyer l'accès au webinaire et me recontacter au sujet de mon projet. <a href="https://www.auraskin.be/confidentialite" target="_blank" rel="noopener">Politique de confidentialité</a></span>
-                  </label>
-                  <p class="field__error" id="consentement-error"></p>
-                </div>
-
-                <!-- Anti-spam : champ invisible, laissé vide par les humains -->
-                <div class="hp" aria-hidden="true">
-                  <label for="website">Ne pas remplir</label>
-                  <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
-                </div>
-
-                <button type="submit" class="btn btn--primary btn--block" id="submit-btn">
-                  <span class="btn__label">Réserver ma place</span>
-                  <span class="spinner" aria-hidden="true"></span>
-                </button>
-                <p class="form-status" id="form-status" role="alert"></p>
-              </form>
-            </div>
-
-            <div class="success" id="success-view" hidden tabindex="-1">
-              <div class="success__mark" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <button type="submit" class="btn btn--primary btn--block" id="submit-btn">
+                    <span class="btn__label">Réserver ma place</span>
+                    <span class="spinner" aria-hidden="true"></span>
+                  </button>
+                  <p class="form-status" id="form-status" role="alert"></p>
+                </form>
               </div>
-              <h2 class="card__title" id="success-title">Votre place est réservée.</h2>
-              <p class="card__sub">Rendez-vous le dimanche 1<sup>er</sup> novembre à 20h00. Le lien de connexion vous sera envoyé à <strong id="success-email"></strong>. Pensez à vérifier vos spams.</p>
-              <p class="success__label">Ajouter à mon agenda</p>
-              <div class="cal-links">
-                <a class="btn btn--ghost btn--sm" id="cal-google" target="_blank" rel="noopener">Google Agenda</a>
-                <a class="btn btn--ghost btn--sm" id="cal-ics" download="webinaire-auraskin.ics">Apple / Outlook</a>
+
+              <div class="success" id="success-view" hidden tabindex="-1">
+                <div class="success__mark" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h2 class="card__title" id="success-title">Votre place est réservée.</h2>
+                <p class="card__sub">Rendez-vous le dimanche 1<sup>er</sup> novembre à 20h00. Le lien de connexion vous sera envoyé à <strong id="success-email"></strong>. Pensez à vérifier vos spams.</p>
+                <p class="success__label">Ajouter à mon agenda</p>
+                <div class="cal-links">
+                  <a class="btn btn--ghost btn--sm" id="cal-google" target="_blank" rel="noopener">Google Agenda</a>
+                  <a class="btn btn--ghost btn--sm" id="cal-ics" download="webinaire-auraskin.ics">Apple / Outlook</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+  </div>
 
+  <main>
     <!-- EXPÉRIENCE -->
     <section class="expertise">
       <div class="wrap expertise__grid">
         <p class="expertise__figure" aria-hidden="true"><strong>10</strong><span>ans</span></p>
         <div class="expertise__text">
           <h2 class="section-title">10 ans aux côtés des esthéticiennes, résumés en une soirée.</h2>
-          <p>Nous partageons ce que le terrain nous a appris : les machines qui tiennent leurs promesses, les erreurs qui coûtent cher au lancement et les vrais chiffres d'une activité laser. Pas de théorie, du concret pour les esthéticiennes et les instituts.</p>
+          <p>Nous partageons ce que le terrain nous a appris : ce qui distingue une machine fiable d'une machine générique, les erreurs qui coûtent cher au lancement et les vrais chiffres d'une activité laser. Notre objectif : vous aider à faire le bon choix.</p>
         </div>
       </div>
     </section>
@@ -177,28 +193,28 @@
       <div class="wrap program__grid">
         <div class="program__content">
           <h2 class="section-title">Au programme</h2>
-          <p class="section-lead">Tout ce qu'il faut savoir pour faire le bon choix, dans l'ordre où vous vous posez les questions.</p>
+          <p class="section-lead">Tout ce qu'il faut savoir pour choisir sereinement, dans l'ordre où vous vous posez les questions.</p>
 
           <ol class="steps">
             <li>
               <h3>Le laser, simplement expliqué</h3>
-              <p>Comment fonctionne l'épilation laser, sur quels types de peau et de poils, et pourquoi les résultats varient d'une machine à l'autre.</p>
+              <p>Comment fonctionne l'épilation laser, sur quels types de peau et de poils, et pourquoi les résultats varient autant d'une machine à l'autre.</p>
             </li>
             <li>
-              <h3>Nos machines en détail</h3>
-              <p>Découverte de nos machines laser, dont Spectra, certifiée CE Medical : technologie, confort de traitement, entretien.</p>
+              <h3>Les caractéristiques qui font la différence</h3>
+              <p>Longueur d'onde, puissance, refroidissement, certification CE Medical : ce qu'il faut vraiment regarder sur une fiche technique.</p>
             </li>
             <li>
-              <h3>Quelle machine choisir</h3>
-              <p>Les critères qui comptent vraiment selon votre institut, votre clientèle et votre budget. Sans jargon.</p>
+              <h3>Les pièges à éviter</h3>
+              <p>Machines génériques, promesses irréalistes, coûts cachés : les erreurs que nous voyons le plus souvent chez les esthéticiennes.</p>
             </li>
             <li>
-              <h3>Le chiffre d'affaires à prévoir</h3>
-              <p>Des scénarios réalistes : nombre de clientes, prix des séances et ce que vous pouvez viser chaque mois.</p>
+              <h3>Quelle machine pour quel projet</h3>
+              <p>Les bons critères selon votre institut, votre clientèle et votre budget, sans jargon.</p>
             </li>
             <li>
-              <h3>Devenir rentable</h3>
-              <p>Fixer vos prix, attirer vos premières clientes, financer votre machine (achat ou leasing) et amortir votre investissement.</p>
+              <h3>Les vrais chiffres</h3>
+              <p>Nombre de clientes, prix des séances, financement : ce que vous pouvez raisonnablement viser, et en combien de temps rentabiliser votre investissement.</p>
             </li>
             <li>
               <h3>Vos questions en direct</h3>
@@ -207,15 +223,18 @@
           </ol>
         </div>
 
-        <figure class="program__visual">
-          <div class="program__machine">
-            <img src="assets/spectra.png" alt="La machine laser Spectra d'AuraSkin" width="788" height="1400" loading="lazy">
-          </div>
-          <figcaption>
-            <strong>Spectra</strong>
-            <span>Certifiée CE Medical. Formation, installation et SAV 6j/7 inclus.</span>
-          </figcaption>
-        </figure>
+        <aside class="outcomes" aria-labelledby="outcomes-title">
+          <h3 id="outcomes-title">À la fin de la soirée, vous saurez</h3>
+          <ul>
+            <li>Lire une fiche technique et comparer deux machines</li>
+            <li>Reconnaître une machine fiable d'une machine générique</li>
+            <li>Choisir la technologie adaptée à votre clientèle</li>
+            <li>Estimer votre chiffre d'affaires et votre rentabilité</li>
+            <li>Éviter les erreurs les plus coûteuses au lancement</li>
+          </ul>
+          <a href="#inscription" class="btn btn--light btn--block js-scroll-to-form">Réserver ma place</a>
+          <p class="outcomes__note"><span class="live-dot live-dot--gold" aria-hidden="true"></span>Places limitées pour le direct</p>
+        </aside>
       </div>
     </section>
 
@@ -226,15 +245,15 @@
         <ul class="audience__list">
           <li>
             <h3>Vous êtes esthéticienne</h3>
-            <p>Vous voulez ajouter l'épilation laser à vos prestations et développer votre chiffre d'affaires.</p>
+            <p>Vous pensez ajouter l'épilation laser à vos prestations et voulez savoir par où commencer.</p>
           </li>
           <li>
             <h3>Vous lancez votre activité</h3>
-            <p>Vous préparez l'ouverture de votre institut ou une reconversion, et vous voulez partir sur de bonnes bases.</p>
+            <p>Vous préparez l'ouverture de votre institut ou une reconversion, et voulez partir sur de bonnes bases.</p>
           </li>
           <li>
-            <h3>Vous avez déjà une machine</h3>
-            <p>Vous voulez comparer, changer d'équipement ou mieux rentabiliser votre activité laser.</p>
+            <h3>Vous comparez plusieurs machines</h3>
+            <p>Vous hésitez entre plusieurs modèles ou fournisseurs et cherchez des critères clairs pour décider.</p>
           </li>
         </ul>
       </div>
@@ -271,11 +290,11 @@
         <div class="closing__content">
           <p class="closing__date">Dimanche 1<sup>er</sup> novembre, 20h00</p>
           <h2 class="closing__title">Ne passez pas à côté de cette soirée.</h2>
-          <p class="closing__text">Les places pour le direct sont limitées. Réservez la vôtre maintenant pour poser toutes vos questions avant d'investir.</p>
+          <p class="closing__text">Les places pour le direct sont limitées. Réservez la vôtre pour comprendre, comparer et choisir en toute sérénité.</p>
           <a href="#inscription" class="btn btn--light js-scroll-to-form">Réserver ma place</a>
         </div>
         <div class="closing__timer">
-          <div class="timer timer--dark" data-timer role="timer" aria-label="Temps restant avant le début du webinaire"></div>
+          <div class="timer" data-timer role="timer" aria-label="Temps restant avant le début du webinaire"></div>
           <p class="timer-status" data-timer-status hidden></p>
         </div>
       </div>

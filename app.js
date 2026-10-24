@@ -7,10 +7,10 @@
 const CONFIG = {
   endpoint: '',
   event: {
-    title: 'Webinaire AuraSkin : tout comprendre du laser avant d\'investir',
+    title: 'Webinaire AuraSkin : bien choisir sa machine laser',
     start: '2026-11-01T20:00:00+01:00', // heure de Bruxelles
     durationMinutes: 90,
-    description: 'Le laser expliqué, nos machines, quelle machine choisir, le chiffre d\'affaires à prévoir et comment être rentable. Le lien de connexion vous est envoyé par email.',
+    description: 'Comprendre les caractéristiques des machines laser et faire le bon choix avant d\'investir. Le lien de connexion vous est envoyé par email.',
     url: 'https://www.auraskin.be',
   },
 };
