@@ -5,7 +5,7 @@
    Laisser vide = mode démo : le formulaire affiche la confirmation sans rien envoyer.
    ========================================================== */
 const CONFIG = {
-  endpoint: '',
+  endpoint: 'https://script.google.com/macros/s/AKfycbwpYtgMKGdzOXtkaK4XAaVcLeV-5J-GV55otOWeq6-JAoIs0oG-WmYuH3qnF7HVTwdV/exec',
   event: {
     title: 'Webinaire AuraSkin : bien choisir sa machine laser',
     start: '2026-11-01T20:00:00+01:00', // heure de Bruxelles
