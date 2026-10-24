@@ -35,9 +35,13 @@
     <section class="hero">
       <div class="wrap hero__grid">
         <div class="hero__intro">
-          <p class="tag"><span class="tag__dot" aria-hidden="true"></span>Webinaire gratuit, en direct</p>
+          <div class="tags">
+            <p class="tag"><span class="tag__dot" aria-hidden="true"></span>Webinaire gratuit, en direct</p>
+            <p class="tag tag--gold">Places limitées</p>
+          </div>
           <h1 class="hero__title">Tout comprendre du laser avant d'investir.</h1>
           <p class="hero__lead">Une soirée pour découvrir nos machines, savoir laquelle choisir, quel chiffre d'affaires viser et comment rentabiliser votre activité laser.</p>
+          <p class="hero__proof">Animé par l'équipe AuraSkin, 10 ans d'expérience au service des esthéticiennes.</p>
         </div>
 
         <div class="hero__date">
@@ -46,12 +50,14 @@
             <span class="date__day">Dimanche 1<sup>er</sup> novembre 2026</span>
             <span class="date__time">20h00, heure de Bruxelles. En ligne, depuis chez vous.</span>
           </p>
-          <p class="countdown" id="countdown" aria-live="off">&nbsp;</p>
+          <div class="timer" data-timer role="timer" aria-label="Temps restant avant le début du webinaire"></div>
+          <p class="timer-status" data-timer-status hidden></p>
         </div>
 
         <div class="hero__form" id="inscription">
           <div class="card">
             <div class="form-view" id="form-view">
+              <p class="seats"><span class="seats__dot" aria-hidden="true"></span>Places limitées pour le direct</p>
               <h2 class="card__title">Réservez votre place</h2>
               <p class="card__sub">Gratuit et sans engagement. Le lien de connexion vous est envoyé par email.</p>
 
@@ -155,6 +161,17 @@
       </div>
     </section>
 
+    <!-- EXPÉRIENCE -->
+    <section class="expertise">
+      <div class="wrap expertise__grid">
+        <p class="expertise__figure" aria-hidden="true"><strong>10</strong><span>ans</span></p>
+        <div class="expertise__text">
+          <h2 class="section-title">10 ans aux côtés des esthéticiennes, résumés en une soirée.</h2>
+          <p>Nous partageons ce que le terrain nous a appris : les machines qui tiennent leurs promesses, les erreurs qui coûtent cher au lancement et les vrais chiffres d'une activité laser. Pas de théorie, du concret pour les esthéticiennes et les instituts.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- PROGRAMME -->
     <section class="program" id="programme">
       <div class="wrap program__grid">
@@ -251,9 +268,16 @@
     <!-- CTA FINAL -->
     <section class="closing">
       <div class="wrap closing__inner">
-        <p class="closing__date">Dimanche 1<sup>er</sup> novembre, 20h00</p>
-        <h2 class="closing__title">Une soirée pour y voir clair sur votre projet laser.</h2>
-        <a href="#inscription" class="btn btn--light js-scroll-to-form">Réserver ma place</a>
+        <div class="closing__content">
+          <p class="closing__date">Dimanche 1<sup>er</sup> novembre, 20h00</p>
+          <h2 class="closing__title">Ne passez pas à côté de cette soirée.</h2>
+          <p class="closing__text">Les places pour le direct sont limitées. Réservez la vôtre maintenant pour poser toutes vos questions avant d'investir.</p>
+          <a href="#inscription" class="btn btn--light js-scroll-to-form">Réserver ma place</a>
+        </div>
+        <div class="closing__timer">
+          <div class="timer timer--dark" data-timer role="timer" aria-label="Temps restant avant le début du webinaire"></div>
+          <p class="timer-status" data-timer-status hidden></p>
+        </div>
       </div>
     </section>
   </main>
@@ -271,7 +295,7 @@
 
   <!-- Barre d'inscription mobile, visible quand le formulaire est hors écran -->
   <div class="mobile-cta" id="mobile-cta" aria-hidden="true">
-    <span>Dim. 1<sup>er</sup> nov., 20h00</span>
+    <span class="mobile-cta__info"><strong>Places limitées</strong><span>Dim. 1<sup>er</sup> nov., 20h00</span></span>
     <a href="#inscription" class="btn btn--primary btn--sm js-scroll-to-form" tabindex="-1">Réserver ma place</a>
   </div>
 

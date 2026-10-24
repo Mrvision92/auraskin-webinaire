@@ -24,40 +24,65 @@ const CONFIG = {
   let registered = false;
 
   /* ---------- Compte à rebours ---------- */
-  const countdownEl = document.getElementById('countdown');
+  const UNITS = [
+    { key: 'days', one: 'jour', many: 'jours' },
+    { key: 'hours', one: 'heure', many: 'heures' },
+    { key: 'minutes', one: 'minute', many: 'minutes' },
+    { key: 'seconds', one: 'seconde', many: 'secondes' },
+  ];
 
-  function plural(n, word) {
-    return n + ' ' + word + (n > 1 ? 's' : '');
-  }
-
-  function joinFr(parts) {
-    if (parts.length <= 1) return parts.join('');
-    return parts.slice(0, -1).join(', ') + ' et ' + parts[parts.length - 1];
-  }
+  // Chaque [data-timer] reçoit ses quatre cases (jours, heures, minutes, secondes).
+  const timers = Array.prototype.map.call(document.querySelectorAll('[data-timer]'), function (el) {
+    const cells = {};
+    UNITS.forEach(function (unit) {
+      const box = document.createElement('div');
+      const num = document.createElement('span');
+      const label = document.createElement('span');
+      box.className = 'timer__unit';
+      num.className = 'timer__num';
+      label.className = 'timer__label';
+      box.append(num, label);
+      el.appendChild(box);
+      cells[unit.key] = { num: num, label: label, value: null };
+    });
+    return { el: el, cells: cells };
+  });
+  const timerStatuses = document.querySelectorAll('[data-timer-status]');
 
   function renderCountdown() {
     const now = Date.now();
-    if (now >= end.getTime()) {
-      countdownEl.textContent = 'Ce webinaire est terminé.';
-      return;
-    }
     if (now >= start.getTime()) {
-      countdownEl.textContent = 'Le webinaire est en cours.';
+      const message = now >= end.getTime() ? 'Ce webinaire est terminé.' : 'Le webinaire est en cours.';
+      timers.forEach(function (t) { t.el.hidden = true; });
+      timerStatuses.forEach(function (s) { s.hidden = false; s.textContent = message; });
       return;
     }
-    const totalMin = Math.ceil((start.getTime() - now) / 60000);
-    const days = Math.floor(totalMin / 1440);
-    const hours = Math.floor((totalMin % 1440) / 60);
-    const minutes = totalMin % 60;
-    const parts = [];
-    if (days) parts.push(plural(days, 'jour'));
-    if (hours) parts.push(plural(hours, 'heure'));
-    if (minutes && days < 2) parts.push(plural(minutes, 'minute'));
-    countdownEl.textContent = 'Début dans ' + joinFr(parts) + '.';
+    const rest = Math.floor((start.getTime() - now) / 1000);
+    const values = {
+      days: Math.floor(rest / 86400),
+      hours: Math.floor((rest % 86400) / 3600),
+      minutes: Math.floor((rest % 3600) / 60),
+      seconds: rest % 60,
+    };
+    timers.forEach(function (t) {
+      UNITS.forEach(function (unit) {
+        const cell = t.cells[unit.key];
+        const v = values[unit.key];
+        if (cell.value === v) return;
+        cell.num.textContent = String(v).padStart(2, '0');
+        cell.label.textContent = v > 1 ? unit.many : unit.one;
+        if (cell.value !== null) {
+          cell.num.classList.remove('is-tick');
+          void cell.num.offsetWidth; // relance l'animation
+          cell.num.classList.add('is-tick');
+        }
+        cell.value = v;
+      });
+    });
   }
 
   renderCountdown();
-  setInterval(renderCountdown, 30000);
+  setInterval(renderCountdown, 1000);
 
   /* ---------- Société -> TVA ---------- */
   const form = document.getElementById('signup');
